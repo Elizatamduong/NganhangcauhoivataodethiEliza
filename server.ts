@@ -639,4 +639,10 @@ async function startServer() {
   });
 }
 
-startServer();
+// Chỉ chạy server trực tiếp khi phát triển trên máy tính
+if (process.env.VERCEL !== "1") {
+  startServer();
+}
+
+// Xuất Express app để Vercel Serverless Function sử dụng
+export default app;
