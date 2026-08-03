@@ -122,7 +122,7 @@ app.post("/api/generate-questions", async (req, res) => {
     4. CẤU TRÚC: Phải trả về JSON mảng đối tượng.`;
 
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-3.5-flash",
+      model: "gemini-3.6-flash",
       contents: `Soạn ${count} câu hỏi ${type === "TracNghiem" ? "Trắc nghiệm" : "Tự luận"} mức độ ${level || "NB"} về ${topic}.`,
       config: {
         systemInstruction,
