@@ -1,0 +1,10 @@
+{
+  "name": "Remix: Final - Ngân Hàng Câu Hỏi và Tạo Đề Thi - Nâng Cao (Eliza Tâm Dương SĐT 0962571826)",
+  "description": "Hệ thống tự động hóa toàn diện quy trình phân tích nguồn tài liệu, thiết lập ma trận đặc tả chuẩn Công văn 7991, tạo đề thi gốc và biên soạn đề thi tương đương thông qua ChatGPT/Gemini dành cho giáo viên Việt Nam.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
