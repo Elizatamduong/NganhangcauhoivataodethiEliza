@@ -14,7 +14,7 @@ app.use(express.urlencoded({ limit: "100mb", extended: true }));
 
 // Helper to initialize Gemini client
 function getGeminiClient() {
-  const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY;
   if (!apiKey) {
     throw new Error("GEMINI_API_KEY is not configured in settings or environment.");
   }
@@ -36,8 +36,8 @@ async function generateContentWithRetry(ai: any, params: {
 }, maxRetriesPerModel = 3, initialDelay = 1500) {
   // Construct dynamic fallback path based on the starting model
   const candidateModels = [params.model];
-  if (params.model !== "gemini-3.1-flash-lite") {
-    candidateModels.push("gemini-3.1-flash-lite");
+  if (params.model !== "gemini-3.6-flash-lite") {
+    candidateModels.push("gemini-3.6-flash-lite");
   }
   if (params.model !== "gemini-flash-latest" && !candidateModels.includes("gemini-flash-latest")) {
     candidateModels.push("gemini-flash-latest");
